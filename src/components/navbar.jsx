@@ -1,15 +1,16 @@
 import '../App.css'
-import NavbarContent from './navbarContent.jsx'
-import NavbarCustomize from './navbarCustomize.jsx';
 
-function Navbar() {
+function Button({ text, className }) {
 
-  return (
-    <div className="navbar">
-      <NavbarContent />
-      <NavbarCustomize />
-    </div>
-  )
+  return <button className={className}>{text}</button>;
 }
 
-export default Navbar;
+export default function Navbar() {
+
+  return (
+    <nav className="navbar">
+      <Button text='Content' className='content' />
+      <Button text='Customize' className='customize' />
+    </nav>
+  )
+}
