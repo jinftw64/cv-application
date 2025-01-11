@@ -1,15 +1,16 @@
 import '../App.css'
-import ActionClear from './actionClear.jsx'
-import ActionLoad from './actionLoad.jsx'
 
-function Action() {
-
+function Button({ text, className }) {
   return (
-    <div className="action">
-      <ActionClear />
-      <ActionLoad />
-    </div>
+    <button className={className}>{text}</button>
   )
 }
 
-export default Action;
+export default function Action() {
+  return (
+    <div className="action">
+      <Button text='Clear' classnName='clear' />
+      <Button text='Load' classnName='load' />
+    </div>
+  )
+}
