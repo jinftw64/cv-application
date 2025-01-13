@@ -1,32 +1,42 @@
 import '../App.css'
-
-function InputGroup({ labelText, inputText, inputType, placeholder, category }) {
-  return (
-    <div className="input-group">
-      <label for={category}>{labelText}</label>
-      <input type={inputType} id={category} value={inputText} placeholder={placeholder} />
-    </div>
-  )
-}
+import InputGroup from '../inputGroup'
 
 export default function PersonalDetails() {
   return (
-    <div className="personalDetails">
-      <div class='fullName'>
-        <InputGroup labelText='Full name' inputText='John Smith' placeholder='First and Last Name' category='full-name' inputType='text' />
-      </div>
-
-      <div class='email'>
-        <InputGroup labelText='Email' inputText='john.smith@gmail.com' placeholder='Email address' category='email' inputType='email' />
-      </div>
-
-      <div class='phone'>
-        <InputGroup labelText='Phone Number' inputText='555-555-5555' placeholder='123-456-7890' category='phone' inputType='tel' />
-      </div>
-
-      <div class='address'>
-        <InputGroup labelText='Address' inputText='Smithtown, NY' placeholder='Address' category='address' inputType='text' />
-      </div>
+    <div className="personal-details">
+      <h2>Personal Details</h2>
+      <InputGroup
+        id='full-name'
+        placeholder='Full name'
+        type='text'
+        labelText='Full name'
+        onChange=''
+        value='John Smith'
+      />
+      <InputGroup
+        id='email'
+        placeholder='Email address'
+        type='email'
+        labelText='Email'
+        onChange=''
+        value='john.smith@gmail.com'
+      />
+      <InputGroup
+        id='phone'
+        placeholder='123-456-7890'
+        type='tel'
+        labelText='Phone'
+        onChange=''
+        value='555-555-5555'
+      />
+      <InputGroup
+        id='address'
+        placeholder='Address'
+        type='text'
+        labelText='Address'
+        onChange=''
+        value='123 Street'
+      />
     </div>
   )
 }
