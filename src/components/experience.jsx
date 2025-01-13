@@ -1,27 +1,26 @@
-import '../App.css'
-import InputGroup from '../inputGroup'
+import InputGroup from "../inputGroup";
 
-export default function Education() {
+export default function Experience() {
   return (
-    <div className="education">
-      <h2>Education</h2>
+    <div className="experience">
+      <h2>Experience</h2>
       <InputGroup
-        id='school'
-        labelText='School'
-        placeholder='Enter school/university'
+        id='company-name'
+        placeholder='Enter Company Name'
         type='text'
+        labelText='Company Name'
         onChange=''
         value=''
       />
       <InputGroup
-        id='degree'
-        labelText='Degree'
-        placeholder='Enter Degree / Field of Study'
+        id='position'
+        placeholder='Enter Position Title'
         type='text'
+        labelText='Position Title'
         onChange=''
         value=''
       />
-      <div className="dates-group">
+      <div className="date-group">
         <InputGroup
           id='start-date'
           labelText='Start Date'
@@ -43,6 +42,14 @@ export default function Education() {
         id='location'
         labelText='Location'
         placeholder='Enter Location'
+        type='text'
+        onChange=''
+        value=''
+      />
+      <InputGroup
+        id='description'
+        labelText='Description'
+        placeholder='Enter Description'
         type='text'
         onChange=''
         value=''
