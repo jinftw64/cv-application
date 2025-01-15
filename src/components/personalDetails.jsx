@@ -1,7 +1,7 @@
 import '../App.css'
 import InputGroup from '../inputGroup'
 
-export default function PersonalDetails() {
+export default function PersonalDetails({ personalDetails: { fullName, email, phone, address } }) {
   return (
     <div className="personal-details">
       <h2>Personal Details</h2>
@@ -11,7 +11,7 @@ export default function PersonalDetails() {
         type='text'
         labelText='Full name'
         onChange=''
-        value='John Smith'
+        value={fullName}
       />
       <InputGroup
         id='email'
@@ -19,7 +19,7 @@ export default function PersonalDetails() {
         type='email'
         labelText='Email'
         onChange=''
-        value='john.smith@gmail.com'
+        value={email}
       />
       <InputGroup
         id='phone'
@@ -27,7 +27,7 @@ export default function PersonalDetails() {
         type='tel'
         labelText='Phone'
         onChange=''
-        value='555-555-5555'
+        value={phone}
       />
       <InputGroup
         id='address'
@@ -35,7 +35,7 @@ export default function PersonalDetails() {
         type='text'
         labelText='Address'
         onChange=''
-        value='123 Street'
+        value={address}
       />
     </div>
   )

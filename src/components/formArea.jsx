@@ -4,12 +4,14 @@ import PersonalDetails from './personalDetails.jsx';
 import Education from './education.jsx';
 import Experience from './experience.jsx';
 
-function FormArea() {
-
+function FormArea({ personalDetails }) {
+  console.log(personalDetails);
   return (
     <div className="formArea">
       <Action />
-      <PersonalDetails />
+      <PersonalDetails
+        personalDetails={personalDetails}
+      />
       <Education />
       <Experience />
     </div>

@@ -1,8 +1,8 @@
 const exampleData = {
   personalDetails: {
-    fullName: 'John Smith',
+    fullName: 'Joe Wayne',
     email: 'john.smith@gmail.com',
-    phone: '555-555-5555',
+    phone: '345-678-5555',
     address: 'Long Island, NY'
   },
   educations: [

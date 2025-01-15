@@ -1,4 +1,8 @@
-import '../App.css'
+function PersonalDetails() {
+  return (
+    pass
+  )
+}
 
 function Resume() {
 
