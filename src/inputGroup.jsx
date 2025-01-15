@@ -5,6 +5,7 @@ function InputGroup({
   labelText,
   onChange,
   value,
+  dataKey,
 }) {
   return (
     <div className="input-group">
@@ -17,6 +18,7 @@ function InputGroup({
           placeholder={placeholder}
           onChange={onChange}
           value={value}
+          data-key={dataKey}
         />
       ) : (
         <input
@@ -25,6 +27,7 @@ function InputGroup({
           placeholder={placeholder}
           onChange={onChange}
           value={value}
+          data-key={dataKey}
         />
       )
       }
