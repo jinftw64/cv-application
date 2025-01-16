@@ -3,11 +3,11 @@ import InputGroup from '../inputGroup'
 
 export default function Education(props) {
   const { educations, setEducations } = props;
+  console.log(educations)
 
-  function handleChange(e, index) {
-    const newEducations = { ...educations }
-    const newValue = e.target.value;
-    const propertyName = e.target.dataset;
+  function handleChange(index, propertyName, newValue) {
+    const newEducations = [...educations]
+    console.log(propertyName);
 
     newEducations[index] = { ...newEducations[index], [propertyName]: newValue }
 
@@ -25,7 +25,7 @@ export default function Education(props) {
             labelText='School'
             placeholder='Enter school/university'
             type='text'
-            onChange={handleChange}
+            onChange={(e) => handleChange(index, e.target.dataset.key, e.target.value)}
             value={education.school}
             dataKey='school'
           />
@@ -34,7 +34,7 @@ export default function Education(props) {
             labelText='Degree'
             placeholder='Enter Degree / Field of Study'
             type='text'
-            onChange={handleChange}
+            onChange={(e) => handleChange(index, e.target.dataset.key, e.target.value)}
             value={education.degree}
             dataKey='degree'
           />
@@ -44,7 +44,7 @@ export default function Education(props) {
               labelText='Start Date'
               placeholder='Enter Start Date'
               type='text'
-              onChange={handleChange}
+              onChange={(e) => handleChange(index, e.target.dataset.key, e.target.value)}
               value={education.startDate}
               dataKey='startDate'
             />
@@ -53,7 +53,7 @@ export default function Education(props) {
               labelText='End Date'
               placeholder='Enter End Date'
               type='text'
-              onChange={handleChange}
+              onChange={(e) => handleChange(index, e.target.dataset.key, e.target.value)}
               value={education.endDate}
               dataKey='endDate'
             />
@@ -63,7 +63,7 @@ export default function Education(props) {
             labelText='Location'
             placeholder='Enter Location'
             type='text'
-            onChange={handleChange}
+            onChange={(e) => handleChange(index, e.target.dataset.key, e.target.value)}
             value={education.location}
             dataKey='location'
           />
