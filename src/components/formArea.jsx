@@ -7,6 +7,7 @@ import Experience from './experience.jsx';
 function FormArea(props) {
   const { personalDetails, setPersonalDetails } = props;
   const { educations, setEducations } = props;
+  const { experiences, setExperiences } = props;
 
   return (
     <div className="formArea">
@@ -19,7 +20,10 @@ function FormArea(props) {
         educations={educations}
         setEducations={setEducations}
       />
-      <Experience />
+      <Experience
+        experiences={experiences}
+        setExperiences={setExperiences}
+      />
     </div>
   )
 }

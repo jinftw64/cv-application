@@ -3,11 +3,9 @@ import InputGroup from '../inputGroup'
 
 export default function Education(props) {
   const { educations, setEducations } = props;
-  console.log(educations)
 
   function handleChange(index, propertyName, newValue) {
     const newEducations = [...educations]
-    console.log(propertyName);
 
     newEducations[index] = { ...newEducations[index], [propertyName]: newValue }
 

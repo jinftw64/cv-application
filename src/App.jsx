@@ -8,8 +8,8 @@ import Resume from './components/resume.jsx'
 function App() {
   const [personalDetails, setPersonalDetails] = useState(exampleData.personalDetails);
   const [educations, setEducations] = useState(exampleData.educations);
-  console.log(personalDetails);
-  console.log(educations);
+  const [experiences, setExperiences] = useState(exampleData.experiences);
+
 
   return (
     <div className="container">
@@ -19,6 +19,8 @@ function App() {
         setPersonalDetails={setPersonalDetails}
         educations={educations}
         setEducations={setEducations}
+        experiences={experiences}
+        setExperiences={setExperiences}
       />
       <Resume />
     </div>
