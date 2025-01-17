@@ -6,6 +6,7 @@ function InputGroup({
   onChange,
   value,
   dataKey,
+  isActive,
 }) {
   return (
     <div className="input-group">
@@ -19,6 +20,7 @@ function InputGroup({
           onChange={onChange}
           value={value}
           data-key={dataKey}
+          isActive={isActive}
         />
       ) : (
         <input
@@ -28,6 +30,7 @@ function InputGroup({
           onChange={onChange}
           value={value}
           data-key={dataKey}
+          isActive={isActive}
         />
       )
       }

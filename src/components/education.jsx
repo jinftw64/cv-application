@@ -1,5 +1,6 @@
 import '../App.css'
 import InputGroup from '../inputGroup'
+import ButtonGroup from './buttonGroup';
 
 export default function Education(props) {
   const { educations, setEducations } = props;
@@ -8,6 +9,13 @@ export default function Education(props) {
     const newEducations = [...educations]
 
     newEducations[index] = { ...newEducations[index], [propertyName]: newValue }
+
+    setEducations(newEducations);
+  }
+
+  const deletePlace = (list, index) => {
+    const newEducations = list.splice(index, 1);
+    console.log(newEducations);
 
     setEducations(newEducations);
   }
@@ -64,6 +72,11 @@ export default function Education(props) {
             onChange={(e) => handleChange(index, e.target.dataset.key, e.target.value)}
             value={education.location}
             dataKey='location'
+          />
+
+          <ButtonGroup
+            index={index}
+            onClick={() => deletePlace(educations, index)}
           />
         </div>
       ))}
