@@ -1,4 +1,5 @@
 import InputGroup from "../inputGroup";
+import ButtonGroup from "./buttonGroup";
 
 export default function Experience(props) {
   const { experiences, setExperiences } = props;
@@ -9,6 +10,13 @@ export default function Experience(props) {
     newExperiences[index] = { ...newExperiences[index], [propertyName]: newValue }
 
     setExperiences(newExperiences);
+  }
+
+  const deletePlace = (list, index) => {
+    const newEducations = [...list];
+    newEducations.splice(index, 1);
+
+    setExperiences(newEducations);
   }
 
   return (
@@ -73,6 +81,10 @@ export default function Experience(props) {
               onChange={(e) => handleChange(index, e.target.dataset.key, e.target.value)}
               value={experience.description}
               dataKey='description'
+            />
+
+            <ButtonGroup
+              onClick={() => deletePlace(experiences, index)}
             />
           </div>
         ))

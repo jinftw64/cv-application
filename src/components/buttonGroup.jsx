@@ -1,33 +1,29 @@
-function DeleteButton({ index, onClick }) {
+function DeleteButton({ onClick }) {
   return (
     <button className="delete"
-      onClick={onClick}
-      index={index}>
+      onClick={onClick}>
       Delete
     </button>
   )
 }
 
-function CancelButton({ index, onClick }) {
+function CancelButton({ onClick }) {
   return (
     <button className="cancel"
-      onClick={onClick}
-      index={index}>
+      onClick={onClick}>
       Cancel
     </button>
   )
 }
 
-export default function ButtonGroup({ index, onClick }) {
+export default function ButtonGroup({ onClick }) {
   return (
     <div className="button-group">
       <DeleteButton
-        index={index}
         onClick={onClick}
       />
 
       <CancelButton
-        index={index}
         onClick={onClick}
       />
     </div>

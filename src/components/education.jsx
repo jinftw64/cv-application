@@ -14,8 +14,8 @@ export default function Education(props) {
   }
 
   const deletePlace = (list, index) => {
-    const newEducations = list.splice(index, 1);
-    console.log(newEducations);
+    const newEducations = [...list];
+    newEducations.splice(index, 1);
 
     setEducations(newEducations);
   }
@@ -75,7 +75,6 @@ export default function Education(props) {
           />
 
           <ButtonGroup
-            index={index}
             onClick={() => deletePlace(educations, index)}
           />
         </div>
